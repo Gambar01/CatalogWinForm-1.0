@@ -37,7 +37,7 @@ namespace CatalogWinForm
 
         private void removeProduct_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex > 0)
+            if (listBox1.SelectedIndex >= 0)
                 listBox1.Items.RemoveAt(listBox1.SelectedIndex);
         }
     }
