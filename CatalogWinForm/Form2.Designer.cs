@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.productName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.originCountry = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.form2Ok = new System.Windows.Forms.Button();
+            this.form2Cancel = new System.Windows.Forms.Button();
+            this.productCost = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // productName
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(368, 23);
-            this.textBox1.TabIndex = 0;
+            this.productName.Location = new System.Drawing.Point(12, 27);
+            this.productName.Name = "productName";
+            this.productName.Size = new System.Drawing.Size(368, 23);
+            this.productName.TabIndex = 0;
             // 
             // label1
             // 
@@ -63,12 +63,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Origin Country :";
             // 
-            // textBox2
+            // originCountry
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 97);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(368, 23);
-            this.textBox2.TabIndex = 3;
+            this.originCountry.Location = new System.Drawing.Point(12, 97);
+            this.originCountry.Name = "originCountry";
+            this.originCountry.Size = new System.Drawing.Size(368, 23);
+            this.originCountry.TabIndex = 3;
             // 
             // label3
             // 
@@ -79,46 +79,48 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Product Cost :";
             // 
-            // textBox3
+            // form2Ok
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 171);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(368, 23);
-            this.textBox3.TabIndex = 5;
+            this.form2Ok.Location = new System.Drawing.Point(12, 224);
+            this.form2Ok.Name = "form2Ok";
+            this.form2Ok.Size = new System.Drawing.Size(75, 23);
+            this.form2Ok.TabIndex = 6;
+            this.form2Ok.Text = "OK";
+            this.form2Ok.UseVisualStyleBackColor = true;
+            this.form2Ok.Click += new System.EventHandler(this.form2Ok_Click);
             // 
-            // button1
+            // form2Cancel
             // 
-            this.button1.Location = new System.Drawing.Point(12, 224);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.form2Cancel.Location = new System.Drawing.Point(305, 224);
+            this.form2Cancel.Name = "form2Cancel";
+            this.form2Cancel.Size = new System.Drawing.Size(75, 23);
+            this.form2Cancel.TabIndex = 7;
+            this.form2Cancel.Text = "Cancel";
+            this.form2Cancel.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // productCost
             // 
-            this.button2.Location = new System.Drawing.Point(305, 224);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.productCost.Location = new System.Drawing.Point(12, 171);
+            this.productCost.Mask = "00000";
+            this.productCost.Name = "productCost";
+            this.productCost.Size = new System.Drawing.Size(368, 23);
+            this.productCost.TabIndex = 8;
+            this.productCost.ValidatingType = typeof(int);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.button2;
+            this.CancelButton = this.form2Cancel;
             this.ClientSize = new System.Drawing.Size(402, 281);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.productCost);
+            this.Controls.Add(this.form2Cancel);
+            this.Controls.Add(this.form2Ok);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.originCountry);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.productName);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
@@ -129,13 +131,13 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox productName;
         private Label label1;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox originCountry;
         private Label label3;
-        private TextBox textBox3;
-        private Button button1;
-        private Button button2;
+        private Button form2Ok;
+        private Button form2Cancel;
+        private MaskedTextBox productCost;
     }
 }

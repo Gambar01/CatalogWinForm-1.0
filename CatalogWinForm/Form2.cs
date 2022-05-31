@@ -13,18 +13,27 @@ namespace CatalogWinForm
     public partial class Form2 : Form
     {
 
-        public string Text1 { get; set; } = string.Empty;
-
         public Form2()
         {
             InitializeComponent();
         }
 
- 
-
-        private void button1_Click(object sender, EventArgs e)
+        public Form2(Props product)
         {
-    
+            InitializeComponent();
+            productName.Text = product.Name;
+            originCountry.Text = product.Country;
+            productCost.Text = product.Cost.ToString();
         }
+        public Props product = new Props();
+
+        private void form2Ok_Click(object sender, EventArgs e)
+        {
+            product.Name = productName.Text;
+            product.Country = originCountry.Text;
+            product.Cost = Convert.ToInt32(productCost.Text);
+            DialogResult = DialogResult.OK;
+        }
+
     }
 }
